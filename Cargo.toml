@@ -1,0 +1,9 @@
+[package]
+name = "sigmaos_craft_design"
+version = "0.1.0"
+edition = "2021"
+description = "UI/UX design tool integration for SigmaOS — component library, design tokens, and Figma/SVG import"
+
+[lib]
+name = "sigmaos_craft_design"
+path = "src/lib.rs"

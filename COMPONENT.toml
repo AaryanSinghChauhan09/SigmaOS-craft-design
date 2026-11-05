@@ -1,0 +1,16 @@
+[component]
+name = "SigmaOS-craft-design"
+tier = 5
+stability = "scaffold"
+language = "rust"
+description = "UI/UX design tool integration for SigmaOS — component library, design tokens, and Figma/SVG import"
+upstream = []
+
+[contract]
+provides = ["design-tokens", "component-library"]
+depends_on = []
+
+[maturity]
+status = "Scaffold"
+test_evidence = "Compiles"
+next_milestone = "Verification test suite"
