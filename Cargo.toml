@@ -2,7 +2,8 @@
 name = "sigmaos_craft_design"
 version = "0.1.0"
 edition = "2021"
-description = "UI/UX design tool integration for SigmaOS — component library, design tokens, and Figma/SVG import"
+license = "MIT"
+description = "SigmaOS craft-design component inspired by Linux Mint / Omarchy / Arch Linux."
 
 [lib]
 name = "sigmaos_craft_design"
