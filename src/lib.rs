@@ -75,30 +75,39 @@ mod tests {
     use super::*;
 
     #[test]
-    fn register_and_resolve() {
+    fn test_register_and_resolve_aaa() {
+        // Arrange
         let mut r = AssetRegistry::new();
+        // Act
         r.register("wallpaper", "/usr/share/wall.png").unwrap();
+        // Assert
         assert_eq!(r.resolve("wallpaper").unwrap(), "/usr/share/wall.png");
     }
 
     #[test]
-    fn duplicate_fails() {
+    fn test_duplicate_fails_aaa() {
+        // Arrange
         let mut r = AssetRegistry::new();
         r.register("a", "/p").unwrap();
+        // Act & Assert
         assert!(matches!(r.register("a", "/q"), Err(AssetError::Duplicate(_))));
     }
 
     #[test]
-    fn empty_path_fails() {
+    fn test_empty_path_fails_aaa() {
+        // Arrange
         let mut r = AssetRegistry::new();
+        // Act & Assert
         assert!(matches!(r.register("a", " "), Err(AssetError::EmptyPath(_))));
     }
 
     #[test]
-    fn resolve_missing_fails() {
-        assert!(matches!(AssetRegistry::new().resolve("x"), Err(AssetError::NotFound(_))));
+    fn test_resolve_missing_fails_aaa() {
+        // Arrange
+        let r = AssetRegistry::new();
+        // Act & Assert
+        assert!(matches!(r.resolve("x"), Err(AssetError::NotFound(_))));
     }
-
 }
 
 /// Backwards-compatible component handle (kept for existing callers/tests).
