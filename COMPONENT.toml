@@ -3,7 +3,7 @@ name = "SigmaOS-craft-design"
 tier = 5
 stability = "scaffold"
 language = "rust"
-description = "UI/UX design tool integration for SigmaOS — component library, design tokens, and Figma/SVG import"
+description = "No GitHub description is set; component scope remains unclassified."
 upstream = []
 
 [contract]
